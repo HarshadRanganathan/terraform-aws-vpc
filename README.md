@@ -1,6 +1,6 @@
 # terraform-aws-vpc
 
-Sample code which uses [terraform-aws-vpc](https://github.com/terraform-aws-modules/terraform-aws-vpc) to create VPC infrastructure in AWS.
+Sample code which uses [terraform-aws-vpc](https://github.com/terraform-aws-modules/terraform-aws-vpc) module to create VPC infrastructure in AWS.
 
 ## Setup and teardown commands
 
