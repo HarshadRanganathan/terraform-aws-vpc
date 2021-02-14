@@ -27,7 +27,7 @@ resource "aws_security_group_rule" "ingress_vpc" {
 
 
 module "vpc" {
-  source          = "git::https://github.com/terraform-aws-modules/terraform-aws-vpc.git//module?ref=2.70.0"
+  source          = "git::https://github.com/terraform-aws-modules/terraform-aws-vpc.git?ref=2.70.0"
   cidr            = var.cidr
   azs             = var.azs
   private_subnets = var.private_subnets
