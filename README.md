@@ -1,6 +1,6 @@
 # terraform-aws-vpc
 
-Sample code which uses [terraform-aws-vpc](https://github.com/terraform-aws-modules/terraform-aws-vpc) module to create VPC infrastructure in AWS.
+Example code that uses [terraform-aws-eks-cluster](https://github.com/cloudposse/terraform-aws-eks-cluster) module to create EKS infrastructure in AWS.
 
 ## Setup and teardown commands
 
