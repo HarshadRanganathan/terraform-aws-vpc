@@ -83,21 +83,6 @@ output "vpc_endpoint_ssm_dns_entry" {
   value       = module.vpc.vpc_endpoint_ssm_dns_entry
 }
 
-output "vpc_endpoint_cassandra_id" {
-  description = "The ID of VPC endpoint for cassandra"
-  value       = module.vpc.vpc_endpoint_cassandra_id
-}
-
-output "vpc_endpoint_cassandra_network_interface_ids" {
-  description = "One or more network interfaces for the VPC Endpoint for cassandra."
-  value       = module.vpc.vpc_endpoint_cassandra_network_interface_ids
-}
-
-output "vpc_endpoint_cassandra_dns_entry" {
-  description = "The DNS entries for the VPC Endpoint for cassandra."
-  value       = module.vpc.vpc_endpoint_cassandra_dns_entry
-}
-
 # Static values (arguments)
 output "azs" {
   description = "A list of availability zones specified as argument to this module"
