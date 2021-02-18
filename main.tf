@@ -27,7 +27,7 @@ resource "aws_security_group_rule" "ingress_vpc" {
 
 
 module "vpc" {
-  source          = "git::https://github.com/terraform-aws-modules/terraform-aws-vpc.git?ref=v2.70.0"
+  source          = "git::https://github.com/terraform-aws-modules/terraform-aws-vpc.git?ref=v2.69.0"
   cidr            = var.cidr
   azs             = var.azs
   private_subnets = var.private_subnets
@@ -131,13 +131,6 @@ module "vpc" {
   enable_glue_endpoint              = var.enable_glue_endpoint
   glue_endpoint_private_dns_enabled = var.glue_endpoint_private_dns_enabled
   glue_endpoint_security_group_ids  = var.glue_endpoint_security_group_ids
-
-  # VPC endpoint for cassandra
-
-  enable_cassandra_endpoint              = var.enable_cassandra_endpoint
-  cassandra_endpoint_private_dns_enabled = var.cassandra_endpoint_private_dns_enabled
-  cassandra_endpoint_security_group_ids  = [aws_security_group.vpce_security_group.id]
-
 
   tags = var.tags
 
