@@ -24,6 +24,9 @@
     "ManagedBy" = "Managed by Terraform"
   }
 
+# The usage of the specific kubernetes.io/cluster/* resource tags below are required
+# for EKS and Kubernetes to discover and manage networking resources
+# https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html#base-vpc-networking
   public_subnet_tags_us_east_1 = {
     "Name"                                      = "public-us-east-1"
     "team"                                      = "aws"
@@ -32,6 +35,9 @@
     "kubernetes.io/role/elb"                    = "1"
   }
 
+# The usage of the specific kubernetes.io/cluster/* resource tags below are required
+# for EKS and Kubernetes to discover and manage networking resources
+# https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html#base-vpc-networking
   private_subnet_tags_us_east_1 = {
     "Name"                                      = "private-us-east-1"
     "team"                                      = "aws"
