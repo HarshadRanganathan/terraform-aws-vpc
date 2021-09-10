@@ -25,13 +25,17 @@
   }
 
   public_subnet_tags_us_east_1 = {
-    "Name"    = "public-us-east-1"
-    "team"    = "aws"
-    "ManagedBy" = "Managed by Terraform"
+    "Name"                                      = "public-us-east-1"
+    "team"                                      = "aws"
+    "ManagedBy"                                 = "Managed by Terraform"
+    "kubernetes.io/cluster/prod-eks-cluster"    = "shared"
+    "kubernetes.io/role/elb"                    = "1"
   }
 
   private_subnet_tags_us_east_1 = {
-    "Name"    = "private-us-east-1"
-    "team"    = "aws"
-    "ManagedBy" = "Managed by Terraform"
+    "Name"                                      = "private-us-east-1"
+    "team"                                      = "aws"
+    "ManagedBy"                                 = "Managed by Terraform"
+    "kubernetes.io/cluster/prod-eks-cluster"    = "shared"
+    "kubernetes.io/role/internal-elb"           = "1"
   }
