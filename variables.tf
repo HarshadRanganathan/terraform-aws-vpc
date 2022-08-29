@@ -1318,23 +1318,19 @@ variable "igw_tags" {
   default     = {}
 }
 
-variable "public_subnet_tags_us_east_1" {
+variable "public_subnet_tags" {
   description = "Additional tags for the public subnets"
   type        = map(string)
   default     = {}
 }
 
-variable "private_subnet_tags_us_east_1" {
-  description = "Additional tags for the public subnets"
-  type        = map(string)
-  default     = {}
-}
 
 variable "private_subnet_tags" {
   description = "Additional tags for the private subnets"
   type        = map(string)
   default     = {}
 }
+
 
 variable "public_route_table_tags" {
   description = "Additional tags for the public route tables"
