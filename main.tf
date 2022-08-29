@@ -168,9 +168,9 @@ module "vpc" {
   vpc_tags = var.vpc_tags
   igw_tags = var.igw_tags
 
-  public_subnet_tags = var.public_subnet_tags_us_east_1
+  public_subnet_tags = var.public_subnet_tags
 
-  private_subnet_tags = var.private_subnet_tags_us_east_1
+  private_subnet_tags = var.private_subnet_tags
 }
 
 
