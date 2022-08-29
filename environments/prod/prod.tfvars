@@ -45,3 +45,25 @@
     "kubernetes.io/cluster/prod-eks-cluster"    = "shared"
     "kubernetes.io/role/internal-elb"           = "1"
   }
+
+sagemaker_notebook_endpoint_region = "us-east-1"
+
+# VPC Endpoint for CloudWatch Logs
+enable_logs_endpoint                    = true
+logs_endpoint_private_dns_enabled       = true
+
+# VPC Endpoint for Sagemaker Notebooks
+enable_sagemaker_notebook_endpoint              = true
+sagemaker_notebook_endpoint_private_dns_enabled = true
+
+# VPC Endpoint for SageMaker API
+enable_sagemaker_api_endpoint                   = true
+sagemaker_api_endpoint_private_dns_enabled      = true
+
+# VPC Endpoint for SageMaker Runtime
+enable_sagemaker_runtime_endpoint               = true
+sagemaker_runtime_endpoint_private_dns_enabled  = true
+
+# VPC Endpoint for Service Catalog
+enable_servicecatalog_endpoint                  = true
+servicecatalog_endpoint_private_dns_enabled     = true
