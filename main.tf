@@ -132,6 +132,37 @@ module "vpc" {
   glue_endpoint_private_dns_enabled = var.glue_endpoint_private_dns_enabled
   glue_endpoint_security_group_ids  = var.glue_endpoint_security_group_ids
 
+  # VPC endpoint for cassandra
+
+  enable_cassandra_endpoint              = var.enable_cassandra_endpoint
+  cassandra_endpoint_private_dns_enabled = var.cassandra_endpoint_private_dns_enabled
+  cassandra_endpoint_security_group_ids  = [aws_security_group.vpce_security_group.id]
+
+  # VPC endpoint for Sagemaker 
+
+  enable_sagemaker_notebook_endpoint              = var.enable_sagemaker_notebook_endpoint
+  sagemaker_notebook_endpoint_region              = var.sagemaker_notebook_endpoint_region
+  sagemaker_notebook_endpoint_private_dns_enabled = var.sagemaker_notebook_endpoint_private_dns_enabled
+  sagemaker_notebook_endpoint_security_group_ids  = [aws_security_group.vpce_security_group.id]
+
+  enable_sagemaker_api_endpoint                     = var.enable_sagemaker_api_endpoint
+  sagemaker_api_endpoint_private_dns_enabled        = var.sagemaker_api_endpoint_private_dns_enabled
+  sagemaker_api_endpoint_security_group_ids         = [aws_security_group.vpce_security_group.id]
+
+  enable_sagemaker_runtime_endpoint                 = var.enable_sagemaker_runtime_endpoint
+  sagemaker_runtime_endpoint_private_dns_enabled    = var.sagemaker_runtime_endpoint_private_dns_enabled
+  sagemaker_runtime_endpoint_security_group_ids     = [aws_security_group.vpce_security_group.id]
+
+  # VPC Endpoint for Service Catalog
+  enable_servicecatalog_endpoint                  = var.enable_servicecatalog_endpoint
+  servicecatalog_endpoint_private_dns_enabled     = var.servicecatalog_endpoint_private_dns_enabled
+  servicecatalog_endpoint_security_group_ids      = [aws_security_group.vpce_security_group.id]
+  
+  # VPC Endpoint for CloudWatch Logs
+  enable_logs_endpoint                            = var.enable_logs_endpoint
+  logs_endpoint_private_dns_enabled               = var.logs_endpoint_private_dns_enabled
+  logs_endpoint_security_group_ids                = [aws_security_group.vpce_security_group.id]
+  
   tags = var.tags
 
   vpc_tags = var.vpc_tags
